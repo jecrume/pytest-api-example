@@ -191,7 +191,7 @@ pytest test_pet.py::test_pet_schema -v
    - `-1` - Negative number
    - `-999` - Large negative number
    - `9999999` - Large positive number
-   - `0` - Zero (edge case)
+   - `100` - Another non-existent ID
 
 **What it does:**
 - Tests the `/pets/{pet_id}` endpoint with invalid pet IDs
@@ -200,10 +200,9 @@ pytest test_pet.py::test_pet_schema -v
 - Runs as 5 separate test cases (parameterized)
 
 **Edge Cases Covered:**
-- Non-existent IDs
-- Negative numbers
-- Zero
-- Very large numbers
+- Non-existent IDs (999, 100)
+- Negative numbers (-1, -999)
+- Very large numbers (9999999)
 
 ---
 
@@ -375,4 +374,6 @@ All TODO tasks have been successfully completed:
 - ✅ All tests use proper assertions and schema validation
 
 The project is now ready for comprehensive API testing with full coverage of the Petstore API endpoints.
+
+
 

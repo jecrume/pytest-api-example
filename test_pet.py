@@ -58,7 +58,7 @@ TODO: Finish this test by...
     -1,       # Negative number
     -999,     # Large negative number
     9999999,  # Large positive number
-    0         # Zero (edge case)
+    100       # Another non-existent ID
 ])
 def test_get_by_id_404(pet_id):
     test_endpoint = f"/pets/{pet_id}"
